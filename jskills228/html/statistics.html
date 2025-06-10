@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Статистика | Пожарна Безопасност</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background-color: #b30000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #800000;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #b30000;
+    }
+
+    .chart-container {
+      margin-top: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ddd;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="centers.html">Центрове</a>
+    <a href="employees.html">Служители</a>
+    <a href="vehicles.html">Автомобили</a>
+    <a href="report.html">Докладвай</a>
+    <a href="statistics.html">Статистика</a>
+    <a href="map.html">Карта</a>
+    <a href="about.html">За нас</a>
+  </nav>
+
+  <!-- Съдържание -->
+  <div class="container">
+    <h1>Статистика за Произшествия</h1>
+
+    <div class="chart-container">
+      <h2>Брой произшествия по месеци</h2>
+      <canvas id="monthlyChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h2>Разпределение по тип на инцидентите</h2>
+      <canvas id="typeChart"></canvas>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Пожарна Безопасност | Всички права запазени
+  </footer>
+
+  <script>
+    // Графика 1: Произшествия по месеци
+    const ctx1 = document.getElementById('monthlyChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Яну', 'Фев', 'Мар', 'Апр', 'Май', 'Юни', 'Юли', 'Авг', 'Сеп', 'Окт', 'Ное', 'Дек'],
+        datasets: [{
+          label: 'Произшествия',
+          data: [12, 9, 15, 20, 18, 25, 22, 30, 27, 24, 19, 14],
+          backgroundColor: 'rgba(179, 0, 0, 0.2)',
+          borderColor: '#b30000',
+          borderWidth: 2,
+          fill: true,
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    // Графика 2: Разпределение по тип на инцидента
+    const ctx2 = document.getElementById('typeChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels: ['Пожари', 'Катастрофи', 'Наводнения', 'Други'],
+        datasets: [{
+          label: 'Тип на инцидента',
+          data: [45, 30, 10, 15],
+          backgroundColor: ['#e74c3c', '#f39c12', '#3498db', '#9b59b6']
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  </script>
+
+</body>
+</html>

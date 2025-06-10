@@ -1,0 +1,243 @@
+/* Основни стилове */
+body {
+    padding-top: 60px; /* Височина на navbar, за да не се покрива съдържанието */
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Навигационна лента - фиксирана */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff3b3b;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    color: #ff3b3b;
+  }
+  
+  /* Бутон за смяна на тема */
+  #theme-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  #theme-toggle:hover {
+    color: #ff3b3b;
+  }
+  
+  /* Херо секция */
+  .hero {
+    position: relative;
+    height: 250px;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* Центрирана секция с бутон */
+  .centered-report {
+    text-align: center;
+    margin: 2rem 1rem;
+    color: #fff;
+  }
+  
+  .centered-report p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .centered-report .hero-btn {
+    display: inline-block;
+    background-color: #ff3b3b;
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 8px #ff3b3b;
+  }
+  
+  .centered-report .hero-btn:hover {
+    background-color: #e03232;
+    box-shadow: 0 0 12px #e03232;
+  }
+  
+  /* Основно съдържание */
+  .main-section {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 1.5rem;
+    flex: 1 1 30%;
+    box-shadow: 0 0 8px rgba(255, 59, 59, 0.3);
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px #ff3b3b;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #ff3b3b;
+  }
+  
+  .card p {
+    line-height: 1.4;
+  }
+  
+  /* Анимация за fade-in */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Футър */
+  .footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Светла тема */
+  body.light-mode {
+    background-color: #f2f2f2;
+    color: #222;
+  }
+  
+  body.light-mode .navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  body.light-mode .navbar .logo {
+    color: #d32f2f;
+  }
+  
+  body.light-mode .nav-links li a {
+    color: #222;
+  }
+  
+  body.light-mode .nav-links li a:hover,
+  body.light-mode .nav-links li a.active {
+    color: #d32f2f;
+  }
+  
+  body.light-mode #theme-toggle {
+    color: #222;
+  }
+  
+  body.light-mode .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    filter: brightness(1.2);
+  }
+  
+  body.light-mode .card {
+    background-color: #fff;
+    color: #222;
+    box-shadow: 0 0 8px rgba(211, 47, 47, 0.3);
+  }
+  
+  body.light-mode .card:hover {
+    box-shadow: 0 0 15px #d32f2f;
+  }
+  
+  body.light-mode .footer {
+    background-color: #eee;
+    color: #444;
+  }
+  
+  body.light-mode .centered-report {
+    color: #222;
+  }
+  
+  body.light-mode .centered-report .hero-btn {
+    background-color: #d32f2f;
+    box-shadow: 0 0 8px #d32f2f;
+  }
+  
+  body.light-mode .centered-report .hero-btn:hover {
+    background-color: #b72a2a;
+    box-shadow: 0 0 12px #b72a2a;
+  }

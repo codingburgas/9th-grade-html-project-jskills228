@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Докладвай произшествие | Пожарна Безопасност</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    nav {
+      background-color: #b30000;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #800000;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: white;
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #b30000;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #b30000;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 20px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #800000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #ddd;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav>
+    <a href="index.html">Начало</a>
+    <a href="centers.html">Центрове</a>
+    <a href="employees.html">Служители</a>
+    <a href="vehicles.html">Автомобили</a>
+    <a href="report.html">Докладвай</a>
+    <a href="statistics.html">Статистика</a>
+    <a href="map.html">Карта</a>
+    <a href="about.html">За нас</a>
+  </nav>
+
+  <!-- Съдържание -->
+  <div class="container">
+    <h1>Докладвай Произшествие</h1>
+    <form onsubmit="submitReport(event)">
+      <label for="address">Адрес / Местоположение</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="coordinates">GPS координати</label>
+      <input type="text" id="coordinates" name="coordinates" placeholder="например: 42.6975, 23.3242" required>
+
+      <label for="incidentType">Тип на произшествието</label>
+      <select id="incidentType" name="incidentType" required>
+        <option value="">Избери тип...</option>
+        <option value="пожар">Пожар</option>
+        <option value="катастрофа">Катастрофа</option>
+        <option value="наводнение">Наводнение</option>
+        <option value="друго">Друго</option>
+      </select>
+
+      <label for="team">Избери екип</label>
+      <select id="team" name="team" required>
+        <option value="">Избери екип...</option>
+        <option value="Екип 1">Екип 1</option>
+        <option value="Екип 2">Екип 2</option>
+        <option value="Екип 3">Екип 3</option>
+      </select>
+
+      <label for="vehicle">Избери автомобил</label>
+      <select id="vehicle" name="vehicle" required>
+        <option value="">Избери автомобил...</option>
+        <option value="CX1234AB">CX1234AB</option>
+        <option value="PB9876BC">PB9876BC</option>
+        <option value="VN5678CD">VN5678CD</option>
+      </select>
+
+      <label for="description">Допълнителна информация</label>
+      <textarea id="description" name="description" rows="4" placeholder="Описание на ситуацията..."></textarea>
+
+      <button type="submit">Изпрати Доклада</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Пожарна Безопасност | Всички права запазени
+  </footer>
+
+  <script>
+    function submitReport(event) {
+      event.preventDefault();
+      alert("Произшествието е докладвано успешно!");
+      // Тук можеш да добавиш реална логика за изпращане на данни към сървър
+    }
+  </script>
+
+</body>
+</html>
