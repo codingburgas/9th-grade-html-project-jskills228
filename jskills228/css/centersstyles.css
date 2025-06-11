@@ -1,0 +1,235 @@
+/* Основни стилове */
+body {
+  padding-top: 60px;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Навигация */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff3b3b;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ff3b3b;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: #ff3b3b;
+}
+
+/* Hero секция */
+.hero {
+  position: relative;
+  height: 400px;
+  background: url('https://images.squarespace-cdn.com/content/v1/5755c9e1859fd06921311251/1605134854289-SC2YGCTE6NWZ6HQUB1KJ/CVFS%252B3B.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Основно съдържание */
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #222;
+  margin-top: 20px;
+  box-shadow: 0 0 8px rgba(255, 59, 59, 0.2);
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #ff3b3b;
+}
+
+td {
+  color: #ddd;
+}
+
+/* Докладвай секция */
+.report-section {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.2);
+}
+
+.report-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.report-btn {
+  display: inline-block;
+  background-color: #ff3b3b;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #ff3b3b;
+}
+
+.report-btn:hover {
+  background-color: #e03232;
+  box-shadow: 0 0 12px #e03232;
+}
+
+/* Футър */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* Светла тема */
+body.light-mode {
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+body.light-mode .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.light-mode .logo {
+  color: #d32f2f;
+}
+
+body.light-mode .nav-links li a {
+  color: #222;
+}
+
+body.light-mode .nav-links li a:hover,
+body.light-mode .nav-links li a.active {
+  color: #d32f2f;
+}
+
+body.light-mode #theme-toggle {
+  color: #222;
+}
+
+body.light-mode .hero {
+  filter: brightness(1.2);
+}
+
+body.light-mode table {
+  background-color: #fff;
+}
+
+body.light-mode th {
+  background-color: #eee;
+  color: #d32f2f;
+}
+
+body.light-mode td {
+  color: #333;
+}
+
+body.light-mode .report-section {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(211, 47, 47, 0.1);
+  color: #222;
+}
+
+body.light-mode .report-btn {
+  background-color: #d32f2f;
+  box-shadow: 0 0 8px #d32f2f;
+}
+
+body.light-mode .report-btn:hover {
+  background-color: #b72a2a;
+  box-shadow: 0 0 12px #b72a2a;
+}
+
+body.light-mode .footer {
+  background-color: #eee;
+  color: #444;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Центрове | Пожарна Безопасност</title>
+  <link rel="stylesheet" href="css/centersstyles.css" />
+  <script defer src="js/centersscript.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body class="dark-mode">
+
+  <!-- Навигация -->
+  <nav class="navbar pinned">
+    <div class="logo">🔥 Пожарна</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="centers.html" class="active">Центрове</a></li>
+      <li><a href="employees.html">Служители</a></li>
+      <li><a href="vehicles.html">Автопарк</a></li>
+      <li><a href="report.html">Докладвай</a></li>
+      <li><a href="statistics.html">Статистики</a></li>
+      <li><a href="map.html">Карта</a></li>
+      <li><a href="about.html">За нас</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <!-- Херо секция -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Пожарни Центрове</h1>
+      <p>Следи активните пожарни центрове и техните контакти.</p>
+    </div>
+  </header>
+
+  <!-- Съдържание -->
+  <main class="container">
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Име на центъра</th>
+            <th>Адрес</th>
+            <th>Телефон</th>
+            <th>GPS Координати</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Център София - Запад</td>
+            <td>ул. „Пожарникарска“ 5, София</td>
+            <td>02 911</td>
+            <td>42.6977, 23.3219</td>
+          </tr>
+          <tr>
+            <td>Център Пловдив - Север</td>
+            <td>бул. „Цариградско шосе“ 20, Пловдив</td>
+            <td>032 666 999</td>
+            <td>42.1354, 24.7453</td>
+          </tr>
+          <tr>
+            <td>Център Варна - Юг</td>
+            <td>ул. „Капитан Петко Войвода“ 11, Варна</td>
+            <td>052 555 123</td>
+            <td>43.2141, 27.9147</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Докладване секция -->
+    <section class="report-section">
+      <p>Виж активните инциденти и докладвай бързо с нашия бутон:</p>
+      <a href="report.html" class="report-btn">🚨 Докладвай инцидент</a>
+    </section>
+  </main>
+
+  <!-- Футър -->
+  <footer class="footer">
+    <p>&copy; 2025 Пожарна безопасност и защита на населението</p>
+  </footer>
+
+</body>
+</html>

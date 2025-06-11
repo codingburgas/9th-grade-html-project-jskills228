@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>Автомобили | Пожарна Безопасност</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/vehiclesstyles.css">
+  <script defer src="js/vehiclesscript.js"></script>
+</head>
+<body class="dark-mode">
+
+  <!-- Навигация -->
+  <nav class="navbar pinned">
+    <div class="logo">🔥 Пожарна</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="centers.html">Центрове</a></li>
+      <li><a href="employees.html">Служители</a></li>
+      <li><a href="vehicles.html" class="active">Автопарк</a></li>
+      <li><a href="report.html">Докладвай</a></li>
+      <li><a href="statistics.html">Статистика</a></li>
+      <li><a href="map.html">Карта</a></li>
+      <li><a href="about.html">За нас</a></li>
+    </ul>
+   <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <!-- Херо секция -->
+  <header class="hero small-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Пожарни Автомобили</h1>
+      <p>Информация за наличните, заетите и ремонтиращите се превозни средства.</p>
+    </div>
+  </header>
+
+  <!-- Съдържание -->
+  <main class="main-section container">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Регистрационен номер</th>
+          <th>Тип</th>
+          <th>Състояние</th>
+          <th>Екип</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CX1234AB</td>
+          <td>Пожарна автоцистерна</td>
+          <td><span class="status available">На разположение</span></td>
+          <td>Екип 1</td>
+        </tr>
+        <tr>
+          <td>PB9876BC</td>
+          <td>Команден автомобил</td>
+          <td><span class="status busy">В операция</span></td>
+          <td>Екип 2</td>
+        </tr>
+        <tr>
+          <td>VN5678CD</td>
+          <td>Спасителен автомобил</td>
+          <td><span class="status maintenance">На ремонт</span></td>
+          <td>Екип 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Футър -->
+  <footer class="footer">
+    <p>&copy; 2025 Пожарна безопасност и защита на населението</p>
+  </footer>
+
+</body>
+</html>

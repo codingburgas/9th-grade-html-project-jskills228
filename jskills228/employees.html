@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Служители | Пожарна Безопасност</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/employeesstyles.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- Навигация -->
+  <nav class="navbar pinned">
+    <div class="logo">🔥 Пожарна</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="centers.html">Центрове</a></li>
+      <li><a href="employees.html" class="active">Служители</a></li>
+      <li><a href="vehicles.html">Автопарк</a></li>
+      <li><a href="report.html">Докладвай</a></li>
+      <li><a href="statistics.html">Статистики</a></li>
+      <li><a href="map.html">Карта</a></li>
+      <li><a href="about.html">За нас</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <!-- Херо секция -->
+  <header class="hero small-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Служители</h1>
+      <p>Следи екипите и техния статус в реално време.</p>
+    </div>
+  </header>
+
+  <!-- Основно съдържание -->
+  <main class="main-section container">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Име и фамилия</th>
+          <th>Индивидуален номер</th>
+          <th>Екип</th>
+          <th>Статус</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Иван Петров</td>
+          <td>BG123456</td>
+          <td>Екип 1</td>
+          <td><span class="status free">Свободен</span></td>
+        </tr>
+        <tr>
+          <td>Георги Иванов</td>
+          <td>BG123457</td>
+          <td>Екип 2</td>
+          <td><span class="status active">В произшествие</span></td>
+        </tr>
+        <tr>
+          <td>Мария Георгиева</td>
+          <td>BG123458</td>
+          <td>Екип 1</td>
+          <td><span class="status waiting">Очакване</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <!-- Футър -->
+  <footer class="footer">
+    <p>&copy; 2025 Пожарна безопасност и защита на населението</p>
+  </footer>
+
+  <script src="js/employeesscript.js"></script>
+</body>
+</html>
