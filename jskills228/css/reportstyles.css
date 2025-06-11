@@ -8,7 +8,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Navbar */
+/* Навигационна лента - фиксирана */
 .navbar {
   position: fixed;
   top: 0;
@@ -36,7 +36,6 @@ body {
   gap: 2rem;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
 
 .nav-links li a {
@@ -44,19 +43,85 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
-  white-space: nowrap;
 }
 
-.nav-links li a:hover {
-  color: #ff3b3b;
-  background-color: transparent;
-  border-radius: 0;
-}
-
+.nav-links li a:hover,
 .nav-links li a.active {
   color: #ff3b3b;
-  background-color: transparent;
-  border-radius: 0;
+}
+
+/* Бутон за смяна на тема */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: #ff3b3b;
+}
+
+/* Светла тема за navbar */
+body.light-mode .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.light-mode .navbar .logo {
+  color: #d32f2f;
+}
+
+body.light-mode .nav-links li a {
+  color: #222;
+}
+
+body.light-mode .nav-links li a:hover,
+body.light-mode .nav-links li a.active {
+  color: #d32f2f;
+}
+
+body.light-mode #theme-toggle {
+  color: #222;
+}
+
+/* Бутон за смяна на тема */
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: #ff3b3b;
+}
+
+/* Светла тема за navbar */
+body.light-mode .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.light-mode .navbar .logo {
+  color: #d32f2f;
+}
+
+body.light-mode .nav-links li a {
+  color: #222;
+}
+
+body.light-mode .nav-links li a:hover,
+body.light-mode .nav-links li a.active {
+  color: #d32f2f;
+}
+
+body.light-mode #theme-toggle {
+  color: #222;
 }
 
 #theme-toggle {

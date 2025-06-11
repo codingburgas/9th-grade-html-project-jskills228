@@ -6,121 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    nav {
-      background-color: #b30000;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      background-color: #800000;
-      border-radius: 5px;
-    }
-
-    #map {
-      height: 80vh;
-      width: 100%;
-    }
-
-    h1 {
-      text-align: center;
-      margin: 20px;
-      color: #b30000;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #ddd;
-    }
-  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/mapstyles.css">
 </head>
 <body>
 
   <!-- Навигация -->
-  <nav>
-    <a href="index.html">Начало</a>
-    <a href="centers.html">Центрове</a>
-    <a href="employees.html">Служители</a>
-    <a href="vehicles.html">Автомобили</a>
-    <a href="report.html">Докладвай</a>
-    <a href="statistics.html">Статистика</a>
-    <a href="map.html">Карта</a>
-    <a href="about.html">За нас</a>
+ <nav class="navbar pinned">
+    <div class="logo">🔥 Пожарна</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Начало</a></li>
+      <li><a href="centers.html">Центрове</a></li>
+      <li><a href="employees.html">Служители</a></li>
+      <li><a href="vehicles.html">Автопарк</a></li>
+      <li><a href="report.html">Докладвай</a></li>
+      <li><a href="statistics.html">Статистики</a></li>
+      <li><a href="map.html" class="active" >Карта</a></li>
+      <li><a href="about.html">За нас</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
   </nav>
 
   <h1>Карта на произшествия и екипи</h1>
-  <div id="map"></div>
 
-  <footer>
+  <div class="map-container">
+    <div id="map"></div>
+  </div>
+
+  <footer class="footer">
     &copy; 2025 Пожарна Безопасност | Всички права запазени
   </footer>
 
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script>
-    // Инициализиране на картата
-    const map = L.map('map').setView([42.6975, 23.3242], 8); // София по подразбиране
-
-    // Добавяне на OpenStreetMap плочка
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Примерни произшествия
-    const incidents = [
-      {
-        lat: 42.6975,
-        lng: 23.3242,
-        type: 'Пожар',
-        team: 'Екип 1',
-        vehicle: 'PB9876BC',
-        time: '10.06.2025 14:32'
-      },
-      {
-        lat: 42.1354,
-        lng: 24.7453,
-        type: 'Катастрофа',
-        team: 'Екип 2',
-        vehicle: 'CX1234AB',
-        time: '10.06.2025 15:12'
-      },
-      {
-        lat: 43.2141,
-        lng: 27.9147,
-        type: 'Наводнение',
-        team: 'Екип 3',
-        vehicle: 'VN5678CD',
-        time: '09.06.2025 09:00'
-      }
-    ];
-
-    // Добавяне на маркери към картата
-    incidents.forEach(incident => {
-      const marker = L.marker([incident.lat, incident.lng]).addTo(map);
-      marker.bindPopup(`
-        <strong>Тип:</strong> ${incident.type}<br>
-        <strong>Екип:</strong> ${incident.team}<br>
-        <strong>Автомобил:</strong> ${incident.vehicle}<br>
-        <strong>Време:</strong> ${incident.time}
-      `);
-    });
-  </script>
-
+  <!-- External JS -->
+  <script src="js/mapscript.js"></script>
 </body>
 </html>
