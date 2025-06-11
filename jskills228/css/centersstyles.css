@@ -233,3 +233,18 @@ body.light-mode .footer {
   background-color: #eee;
   color: #444;
 }
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 59, 59, 0.3);
+}
+
+#map {
+  height: 70vh;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
