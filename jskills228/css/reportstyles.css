@@ -218,6 +218,31 @@ body.light-mode #theme-toggle {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://cdn.theatlantic.com/thumbor/hgdiz-3A_6mjgXAwBeSQX2KqFeQ=/0x146:2000x1188/960x500/media/img/photo/2022/07/photos-wildfires-rage-across-southw/a01_1241970129-1/original.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #121212; /* fallback */
+  color: #fff;
+  padding-top: 60px; /* За navbar */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* затъмняване */
+  z-index: -1;
+}
+
 /* Светла тема */
 body.light-mode {
   background-color: #f2f2f2;
