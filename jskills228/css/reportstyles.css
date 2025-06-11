@@ -1,0 +1,222 @@
+/* Основни стилове */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  padding-top: 60px; /* За navbar */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff3b3b;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links li a:hover {
+  color: #ff3b3b;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.nav-links li a.active {
+  color: #ff3b3b;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+#theme-toggle {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-left: 0.3rem;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+}
+
+#theme-toggle:hover {
+  color: #ff3b3b;
+}
+
+/* Контейнер и форма за докладване - малко по-малка ширина */
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px 20px;
+  background-color: #222;  /* Тъмен фон по подразбиране */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 59, 59, 0.5);
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container h1 {
+  text-align: center;
+  color: #ff3b3b;
+  margin-bottom: 20px;
+}
+
+.container label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #eee;
+}
+
+.container input,
+.container select,
+.container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #333;
+  color: #eee;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.container input:focus,
+.container select:focus,
+.container textarea:focus {
+  border-color: #ff3b3b;
+  outline: none;
+  background-color: #2b2b2b;
+}
+
+.container button {
+  background-color: #ff3b3b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+  background-color: #d32f2f;
+}
+
+/* Футър */
+.footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Светла тема */
+body.light-mode {
+  background-color: #f2f2f2;
+  color: #222;
+}
+
+body.light-mode .navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.light-mode .navbar .logo {
+  color: #d32f2f;
+}
+
+body.light-mode .nav-links li a {
+  color: #222;
+}
+
+body.light-mode .nav-links li a:hover,
+body.light-mode .nav-links li a.active {
+  color: #d32f2f;
+}
+
+body.light-mode #theme-toggle {
+  color: #222;
+}
+
+/* Светла тема за контейнера */
+body.light-mode .container {
+  background-color: #fff;
+  color: #222;
+  box-shadow: 0 0 10px rgba(211, 47, 47, 0.3);
+}
+
+body.light-mode .container label {
+  color: #444;
+}
+
+body.light-mode .container input,
+body.light-mode .container select,
+body.light-mode .container textarea {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #222;
+}
+
+body.light-mode .container input:focus,
+body.light-mode .container select:focus,
+body.light-mode .container textarea:focus {
+  border-color: #d32f2f;
+  background-color: #fff;
+}
+
+body.light-mode .container button {
+  background-color: #d32f2f;
+}
+
+body.light-mode .container button:hover {
+  background-color: #a52727;
+}
+
+body.light-mode .footer {
+  background-color: #eee;
+  color: #444;
+}
+
