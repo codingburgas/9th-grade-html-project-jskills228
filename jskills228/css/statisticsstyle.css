@@ -98,18 +98,33 @@ body {
   }
 }
 
-.footer {
-  background-color: #1a1a1a;
-  color: #ccc;
-  text-align: center;
-  padding: 1.5rem 1rem;
-  font-size: 1rem;
-  margin-top: 3rem;
-  border-top: 1px solid #333;
-}
 
 body.light-mode .footer {
   background-color: #eee;
   color: #444;
   border-top: 1px solid #ccc;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://www.capradio.org/media/12274552/ap24220382860398p.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #121212; /* fallback /
+  color: #fff;
+  padding-top: 60px; / За navbar */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* затъмняване */
+  z-index: -1;
 }

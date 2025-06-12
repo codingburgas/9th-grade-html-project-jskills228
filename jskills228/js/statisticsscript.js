@@ -32,7 +32,7 @@ new Chart(ctx2, {
     datasets: [{
       label: 'Тип на инцидента',
       data: [45, 30, 10, 15],
-      backgroundColor: ['#ff6b6b', '#ffa94d', '#ffd43b', '#f06595']
+      backgroundColor: ['#8a1919', '#de571d', '#e61515', '#de1f65']
     }]
   },
   options: {
