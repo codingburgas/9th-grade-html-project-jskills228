@@ -186,3 +186,27 @@ body.light-mode .footer {
   background-color: #eee;
   color: #444;
 }
+/* Статус стилове */
+.status {
+  margin-top: 0.8rem;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.free {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.active {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.waiting {
+  background-color: #fff3cd;
+  color: #856404;
+}
